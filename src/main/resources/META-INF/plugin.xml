@@ -5,14 +5,11 @@
     <vendor>kennysoft</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>Lombook Plugin</depends>
+    <depends>com.intellij.ko</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="kr.kennysoft.idea260828korean.services.MyApplicationService"/>
-        <projectService serviceImplementation="kr.kennysoft.idea260828korean.services.MyProjectService"/>
+        <daemon.highlightInfoFilter implementation="kr.kennysoft.idea260828korean.extension.LombokHighlightErrorFilter"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="kr.kennysoft.idea260828korean.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
