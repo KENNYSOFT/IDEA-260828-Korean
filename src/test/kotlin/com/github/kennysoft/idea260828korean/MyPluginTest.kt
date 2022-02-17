@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.kennysoft.idea260828korean
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile
