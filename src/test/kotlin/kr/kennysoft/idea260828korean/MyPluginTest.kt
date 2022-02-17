@@ -1,4 +1,4 @@
-package com.github.kennysoft.idea260828korean
+package kr.kennysoft.idea260828korean
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile

@@ -1,18 +1,18 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.kennysoft.idea260828korean</id>
+    <id>kr.kennysoft.idea260828korean</id>
     <name>IDEA-260828-Korean</name>
     <vendor>kennysoft</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.kennysoft.idea260828korean.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.kennysoft.idea260828korean.services.MyProjectService"/>
+        <applicationService serviceImplementation="kr.kennysoft.idea260828korean.services.MyApplicationService"/>
+        <projectService serviceImplementation="kr.kennysoft.idea260828korean.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.kennysoft.idea260828korean.listeners.MyProjectManagerListener"
+        <listener class="kr.kennysoft.idea260828korean.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
