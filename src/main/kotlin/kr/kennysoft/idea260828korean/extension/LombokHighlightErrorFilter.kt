@@ -5,6 +5,7 @@ import com.intellij.codeInsight.daemon.impl.HighlightInfoFilter
 import com.intellij.lang.annotation.HighlightSeverity
 import com.intellij.psi.PsiFile
 import de.plushnikov.intellij.plugin.util.LombokLibraryUtil
+import kr.kennysoft.idea260828korean.JavaErrorBundle
 import kr.kennysoft.idea260828korean.handler.OnXAnnotationHandler
 import java.util.regex.Pattern
 
@@ -12,7 +13,8 @@ import java.util.regex.Pattern
  * @see de.plushnikov.intellij.plugin.extension.LombokHighlightErrorFilter
  */
 class LombokHighlightErrorFilter : HighlightInfoFilter {
-    private val LOMBOK_ANY_ANNOTATION_REQUIRED = Pattern.compile("Incompatible types\\. Found: '__*', required: 'lombok.*AnyAnnotation\\[\\]'")
+    private val LOMBOK_ANY_ANNOTATION_REQUIRED =
+        Pattern.compile(JavaErrorBundle.message("incompatible.types", "lombok.*AnyAnnotation\\[\\]", "__*"))
 
     override fun accept(highlightInfo: HighlightInfo, file: PsiFile?): Boolean {
         if (null == file) {
