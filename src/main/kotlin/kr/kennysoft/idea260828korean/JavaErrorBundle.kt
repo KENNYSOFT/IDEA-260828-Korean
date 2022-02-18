@@ -7,6 +7,10 @@ import org.jetbrains.annotations.PropertyKey
 @NonNls
 private const val BUNDLE = "messages.JavaErrorBundle"
 
+/**
+ * * Original: ideaIC-XXXX.Y.zip/plugins/java/lib/java_resources_en.jar/messages/JavaErrorBundle.properties
+ * * i18n: ko.XXX.YYY.zip/lib/ko.XXX.YYY.jar/messages/JavaErrorBundle.properties
+ */
 object JavaErrorBundle : DynamicBundle(BUNDLE) {
 
     @Suppress("SpreadOperator")

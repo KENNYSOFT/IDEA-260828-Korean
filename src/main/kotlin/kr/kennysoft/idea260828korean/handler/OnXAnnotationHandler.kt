@@ -66,7 +66,7 @@ object OnXAnnotationHandler {
             return false
         }
 
-        val containingAnnotation: PsiElement? = nameValuePair.context?.context;
+        val containingAnnotation: PsiElement? = nameValuePair.context?.context
         return containingAnnotation is PsiAnnotation && ONXABLE_ANNOTATIONS.contains(containingAnnotation.qualifiedName)
     }
 

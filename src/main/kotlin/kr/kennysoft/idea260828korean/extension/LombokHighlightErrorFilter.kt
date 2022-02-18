@@ -12,7 +12,7 @@ import java.util.regex.Pattern
 /**
  * @see de.plushnikov.intellij.plugin.extension.LombokHighlightErrorFilter
  */
-class LombokHighlightErrorFilter : HighlightInfoFilter {
+object LombokHighlightErrorFilter : HighlightInfoFilter {
     private val LOMBOK_ANY_ANNOTATION_REQUIRED =
         Pattern.compile(JavaErrorBundle.message("incompatible.types", "lombok.*AnyAnnotation\\[\\]", "__*"))
 
