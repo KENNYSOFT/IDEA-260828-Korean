@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>kr.kennysoft.idea260828korean</id>
     <name>IDEA-260828-Korean</name>
-    <vendor>kennysoft</vendor>
+    <vendor url="http://kennysoft.kr">KENNYSOFT</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.java</depends>
