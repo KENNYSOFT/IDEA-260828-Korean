@@ -3,6 +3,8 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+
+## [1.0.0]
 ### Added
 - Support i18n of key "incompatible.types"
 - Add vendor URL
