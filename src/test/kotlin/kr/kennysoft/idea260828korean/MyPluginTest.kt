@@ -9,7 +9,11 @@ import com.intellij.util.PsiErrorElementUtil
 @TestDataPath("\$CONTENT_ROOT/src/test/testData")
 class MyPluginTest : BasePlatformTestCase() {
 
-    fun testXMLFile() {
+    fun testHelloWorld() {
+        assertEquals(2, 1 + 1)
+    }
+
+    fun ignoredTestXMLFile() {
         val psiFile = myFixture.configureByText(XmlFileType.INSTANCE, "<foo>bar</foo>")
         val xmlFile = assertInstanceOf(psiFile, XmlFile::class.java)
 
@@ -25,7 +29,7 @@ class MyPluginTest : BasePlatformTestCase() {
 
     override fun getTestDataPath() = "src/test/testData/rename"
 
-    fun testRename() {
+    fun ignoredTestRename() {
         myFixture.testRename("foo.xml", "foo_after.xml", "a2")
     }
 }
