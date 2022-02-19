@@ -15,6 +15,8 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
+IntelliJ IDEA with [Korean Language Pack](https://plugins.jetbrains.com/plugin/13711) has a known issue: [IDEA-260828](https://youtrack.jetbrains.com/issue/IDEA-260828). This plugin makes IntelliJ IDEA detour it temporarily. 
+
 [IDEA-260828](https://youtrack.jetbrains.com/issue/IDEA-260828) 고쳐줄 때까지 숨 참음
 <!-- Plugin description end -->
 
