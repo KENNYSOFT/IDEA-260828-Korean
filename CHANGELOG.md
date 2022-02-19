@@ -3,6 +3,9 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+### Added
+- Extend pluginSinceBuild to 201
+- Add plugin description in English
 
 ## [1.0.0]
 ### Added
