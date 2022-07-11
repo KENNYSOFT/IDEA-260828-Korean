@@ -3,6 +3,8 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+
+## [1.0.2]
 ### Added
 - Extend pluginUntilBuild to unlimited
 
