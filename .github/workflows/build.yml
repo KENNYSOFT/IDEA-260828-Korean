@@ -112,7 +112,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ fromJson(needs.build.outputs.matrix) }}
+      matrix: ${{ fromJSON(needs.build.outputs.matrix) }}
     steps:
 
       # Check out current repository
