@@ -3,6 +3,9 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+### Added
+- Extend pluginUntilBuild to unlimited
+
 ### Removed
 - Remove plugin icon
 
