@@ -33,6 +33,11 @@ jobs:
       changelog: ${{ steps.properties.outputs.changelog }}
     steps:
 
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@v6
+        with:
+          remove-android: 'true'
+
       # Check out current repository
       - name: Fetch Sources
         uses: actions/checkout@v2.4.0
