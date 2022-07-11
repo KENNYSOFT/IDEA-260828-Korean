@@ -31,6 +31,7 @@ jobs:
     outputs:
       version: ${{ steps.properties.outputs.version }}
       changelog: ${{ steps.properties.outputs.changelog }}
+      matrix: ${{ steps.properties.outputs.matrix }}
     steps:
 
       # Check out current repository
