@@ -3,6 +3,8 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+### Removed
+- Remove plugin icon
 
 ## [1.0.1]
 ### Added
