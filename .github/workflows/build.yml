@@ -67,7 +67,7 @@ jobs:
           echo "::set-output name=changelog::$CHANGELOG"
 
           ./gradlew listProductsReleases # prepare list of IDEs for Plugin Verifier
-          echo "::set-output name=matrix::$(cat ./build/listProductsReleases.txt | jq --raw-input --slurp --compact-output '{include: [{productRelease: split("\n")[]}]}')"
+          echo "::set-output name=matrix::$(cat ./build/listProductsReleases.txt | jq --raw-input --slurp --compact-output '{productRelease: split("\n")}')"
 
       # Run tests
       - name: Run Tests
