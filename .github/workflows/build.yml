@@ -183,7 +183,7 @@ jobs:
   releaseDraft:
     name: Release Draft
     if: github.event_name != 'pull_request'
-    needs: verify
+    needs: [build, verify]
     runs-on: ubuntu-latest
     permissions:
       contents: write
