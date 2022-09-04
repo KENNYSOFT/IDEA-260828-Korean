@@ -3,6 +3,8 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+
+## [1.1.0]
 ### Changed
 - Upgrade dependencies to match intellij-platform-plugin-template v1.2.0
 
