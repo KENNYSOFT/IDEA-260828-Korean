@@ -3,6 +3,11 @@
 # IDEA-260828-Korean Changelog
 
 ## [Unreleased]
+### Changed
+- Upgrade dependencies to match intellij-platform-plugin-template v1.2.0
+
+### Removed
+- Remove building searchable options
 
 ## [1.0.2]
 ### Added
