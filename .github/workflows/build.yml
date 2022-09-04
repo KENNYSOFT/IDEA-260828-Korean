@@ -34,9 +34,16 @@ jobs:
       matrix: ${{ steps.properties.outputs.matrix }}
     steps:
 
+      # Free GitHub Actions Environment Disk Space
+      - name: Maximize Build Space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       # Validate wrapper
       - name: Gradle Wrapper Validation
@@ -48,7 +55,6 @@ jobs:
         with:
           distribution: zulu
           java-version: 11
-          cache: gradle
 
       # Set environment variables
       - name: Export Properties
@@ -116,9 +122,16 @@ jobs:
       matrix: ${{ fromJSON(needs.build.outputs.matrix) }}
     steps:
 
+      # Free GitHub Actions Environment Disk Space
+      - name: Maximize Build Space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       # Validate wrapper
       - name: Gradle Wrapper Validation
@@ -141,7 +154,7 @@ jobs:
 
       # Cache Plugin Verifier IDEs
       - name: Setup Plugin Verifier IDEs Cache
-        uses: actions/cache@v3.0.6
+        uses: actions/cache@v3
         with:
           path: ${{ steps.properties.outputs.pluginVerifierHomeDir }}/ides
           key: plugin-verifier-${{ matrix.productRelease }}
@@ -173,11 +186,13 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: verify
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
 
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       # Remove old release drafts by using the curl request for the available releases with draft flag
       - name: Remove Old Release Drafts
